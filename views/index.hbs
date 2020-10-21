@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<div>{{> menu}}</div>
+	<hr>
+	<h1>{{description}}</h1>
+	<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+
+		{{#each links}}
+		<div class="uk-card uk-card-large uk-card-default uk-card-body  uk-card-hover">
+			<h3 class="uk-card-title">
+				<a href="/files/{{this}}" title="{{this}}" target="_blank">{{this}}</a>
+			</h3>
+		</div>
+		{{/each}}
+
+	</div>
+</body>
+
+</html>
